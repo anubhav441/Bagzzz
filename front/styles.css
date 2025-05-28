@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -17,14 +17,14 @@ body {
   margin: auto;
 }
 
-/* Header */
+
 header {
   background-color: #111;
   color: white;
   padding-bottom: 1rem;
 }
 
-/* --- Top Row: Logo + Nav + User Icon --- */
+
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -85,7 +85,23 @@ header {
   font-size: 1rem;
 }
 
-/* --- Button Styling --- */
+.ads-banner{
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.ads-banner img {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto
+}
+
+
 .btn {
   background-color: #ff6b6b;
   color: white;
@@ -95,7 +111,7 @@ header {
   font-weight: bold;
 }
 
-/* --- Product Section --- */
+
 .section-title {
   margin-top: 2rem;
   font-size: 2rem;
@@ -112,7 +128,7 @@ header {
 
 .product-card {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
   padding: 1rem;
@@ -140,7 +156,7 @@ header {
   color: #ff6b6b;
 }
 
-/* --- Footer --- */
+
 footer {
   background-color: #111;
   color: white;
@@ -148,29 +164,19 @@ footer {
   padding: 1rem 0;
 }
 
-/* --- Responsive Layout --- */
-@media (max-width: 768px) {
-  .header-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .nav-user {
+
+@media (max-width: 768px) {
+  .header-top,
+  .nav-user,
+  .nav-links {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
     width: 100%;
   }
 
   .nav-links {
-    flex-direction: column;
-    gap: 0.8rem;
-    width: 100%;
-  }
-
-  .search-bar-wrapper {
-    justify-content: center;
-    padding: 1rem 0;
+    gap: 10px;
   }
 
   .search-bar input {
@@ -181,3 +187,4 @@ footer {
     font-size: 1.5rem;
   }
 }
+
