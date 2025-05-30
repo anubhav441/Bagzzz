@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -17,14 +17,14 @@ body {
   margin: auto;
 }
 
-/* Header */
+
 header {
   background-color: #111;
   color: white;
   padding-bottom: 1rem;
 }
 
-/* --- Top Row: Logo + Nav + User Icon --- */
+
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -85,7 +85,89 @@ header {
   font-size: 1rem;
 }
 
-/* --- Button Styling --- */
+.hero {
+  background: url('https://assets.vogue.in/photos/67d00d6cb1d0d96df64e9961/16:9/w_1280,c_limit/ss25-holding-bags-b.png') center/cover no-repeat;
+  color: rgb(201, 188, 188);
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.8rem;
+  color: rgb(60, 66, 60);
+  max-width: 1000px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.recommend-section {
+  margin-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.recommend-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.recommend-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 1rem;
+  flex: 1 1 300px;
+}
+
+.box-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.item-list li {
+  text-align: center;
+}
+
+.item-list img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.item-list span {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
 .btn {
   background-color: #ff6b6b;
   color: white;
@@ -95,7 +177,7 @@ header {
   font-weight: bold;
 }
 
-/* --- Product Section --- */
+
 .section-title {
   margin-top: 2rem;
   font-size: 2rem;
@@ -112,7 +194,7 @@ header {
 
 .product-card {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
   padding: 1rem;
@@ -140,7 +222,7 @@ header {
   color: #ff6b6b;
 }
 
-/* --- Footer --- */
+
 footer {
   background-color: #111;
   color: white;
@@ -148,29 +230,19 @@ footer {
   padding: 1rem 0;
 }
 
-/* --- Responsive Layout --- */
-@media (max-width: 768px) {
-  .header-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .nav-user {
+
+@media (max-width: 768px) {
+  .header-top,
+  .nav-user,
+  .nav-links {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
     width: 100%;
   }
 
   .nav-links {
-    flex-direction: column;
-    gap: 0.8rem;
-    width: 100%;
-  }
-
-  .search-bar-wrapper {
-    justify-content: center;
-    padding: 1rem 0;
+    gap: 10px;
   }
 
   .search-bar input {
@@ -181,3 +253,4 @@ footer {
     font-size: 1.5rem;
   }
 }
+
