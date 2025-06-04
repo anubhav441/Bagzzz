@@ -17,13 +17,11 @@ body {
   margin: auto;
 }
 
-
 header {
   background-color: #111;
   color: white;
   padding-bottom: 1rem;
 }
-
 
 .header-top {
   display: flex;
@@ -68,6 +66,12 @@ header {
   border: 2px solid white;
 }
 
+.language {
+  padding: 4px 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
 .search-bar-wrapper {
   display: flex;
@@ -168,6 +172,56 @@ header {
 }
 
 
+
+#sort {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.feedback-form-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input {
+  padding: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+.newsletter-form .btn {
+  padding: 0.6rem 1.2rem;
+}
+
 .btn {
   background-color: #ff6b6b;
   color: white;
@@ -176,7 +230,6 @@ header {
   border-radius: 5px;
   font-weight: bold;
 }
-
 
 .section-title {
   margin-top: 2rem;
@@ -222,6 +275,34 @@ header {
   color: #ff6b6b;
 }
 
+.download-banner {
+  background-color: #ff6b6b;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 800px;
+}
+
+.download-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.download-banner p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.download-banner .btn {
+  background-color: white;
+  color: #ff6b6b;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
 footer {
   background-color: #111;
@@ -230,27 +311,151 @@ footer {
   padding: 1rem 0;
 }
 
-
-
 @media (max-width: 768px) {
-  .header-top,
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
   .nav-user,
   .nav-links {
     flex-direction: column;
-    align-items: flex-start;
     width: 100%;
-  }
-
-  .nav-links {
-    gap: 10px;
-  }
-
-  .search-bar input {
-    width: 90%;
+    gap: 0.5rem;
   }
 
   .logo {
     font-size: 1.5rem;
   }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .recommend-grid {
+    flex-direction: column;
+  }
+
+  .item-list {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
 }
+
+
+/* Popular Brands Section */
+.popular-brands-section {
+  background-color: #f3f3f3;
+  padding: 2rem;
+  margin: 3rem auto;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  max-width: 1200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.popular-brands-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.brand-logo-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.brand-logo-row img {
+  height: px;
+  max-width: 120px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo-row img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .brand-logo-row {
+    gap: 1rem;
+  }
+
+  .popular-brands-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .brand-logo-row img {
+    height: 40px;
+    max-width: 100px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Product Page Styling */
+.product-page {
+  background-color: #fff;
+  margin: 3rem auto;
+  padding: 2rem;
+  max-width: 800px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.product-page img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.product-page h1 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.product-page .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.product-page p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+
 
