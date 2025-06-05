@@ -17,6 +17,10 @@ body {
   margin: auto;
 }
 
+
+
+
+
 header {
   background-color: #111;
   color: white;
@@ -72,6 +76,8 @@ header {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+
 
 .search-bar-wrapper {
   display: flex;
@@ -170,6 +176,7 @@ header {
   font-size: 0.9rem;
   color: #555;
 }
+
 
 
 
@@ -304,12 +311,15 @@ header {
   font-weight: bold;
 }
 
+
 footer {
   background-color: #111;
   color: white;
   text-align: center;
   padding: 1rem 0;
 }
+
+
 
 @media (max-width: 768px) {
   .header-top {
